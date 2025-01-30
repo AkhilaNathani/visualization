@@ -1,0 +1,217 @@
+
+:root {
+    --primary-blue: #13294B;
+    --secondary-blue: #1D58A7;
+    --accent-orange: #E84A27;
+    --light-gray: #F8F9FA;
+    --border-color: #0f1011;
+    --text-color: #1A1A1A;
+}
+td:hover {
+    border-color: var(--accent-orange);
+    background-color: rgba(232, 74, 39, 0.1);
+  }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--text-color);
+    line-height: 1.5;
+    margin: 0;
+    padding: 120px;
+    background-color: var(--light-gray);
+}
+
+.container {
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; 
+}
+
+h2 {
+    color: var(--primary-blue);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    border-bottom: 3px solid var(--accent-orange);
+    padding-bottom: 0.5rem;
+}
+
+#legend_container {
+    background: white;
+    padding: 1px;
+    border-radius: 8px;
+    flex-direction: row;
+    box-shadow: 0 2px 4px rgba(139, 116, 116, 0.932);
+    margin-bottom: 1rem;
+}
+
+#legend_container ul {
+    list-style: none;
+    padding: 0.5px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#legend_container li {
+    padding: 0.5rem 2rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: white;
+    margin-bottom: 0.25rem;
+}
+
+.prereq { background-color: #6aaa96; }
+.immediate { background-color: #4A8522; }
+.coreq { background-color: #e67f83; }
+.immediate.coreq { background-color: #309bda; }
+.postreq { background-color: #CC0000; }
+
+.table_container {
+    flex: 3; 
+    max-width: 70%; 
+}
+
+#courseTable {
+    width: 100%;
+    border-collapse: separate;
+    table-layout: fixed;
+}
+
+#courseTable th {
+    background-color: var(--primary-blue);
+    color: rgb(245, 243, 243);
+    font-weight: 700;
+    padding: 0.75rem;
+    position: sticky;
+    top: 0;
+    text-align: center;
+}
+
+#courseTable td {
+    width: 18.666%;
+    border: 1px solid var(--border-color);
+    vertical-align: top;
+    padding: 0.2rem;
+    height: 100%;
+}
+
+.course-container {
+    display: flex;
+    flex-direction: column;
+    gap: -1px;
+    height: 100%;
+    min-height: 200px;
+}
+
+.item {
+    padding: 0.75rem;
+    border-radius: 4px;
+    background-color: var(--light-gray);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    margin: 0.1rem 0;
+    font-weight: 500;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3rem;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+      
+}
+
+.item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: white;
+}
+
+.highlight-prereq {
+    background-color: rgba(29, 88, 167, 0.9);
+    color: white;
+}
+
+.highlight-postreq {
+    background-color: rgba(204, 0, 0, 0.9);
+    color: white;
+}
+
+
+input[type="text"] {
+    width: 90%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+button {
+    width: 90%;
+}
+
+button:hover {
+    background-color: var(--accent-orange);
+}
+
+
+@media (max-width: 768px) {
+    body { 
+        padding: 0.5rem; 
+    }
+    .item { 
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+    #courseTable td {
+        padding: 0.5rem;
+    }
+
+}
+
+.table-and-question-container {
+    display: flex;
+    align-items: flex-start; 
+    justify-content: space-between; 
+    width: 100%;
+    gap: 2rem; 
+}
+
+
+#qa-container {
+    flex: 1; 
+    max-width: 30%;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+    
+#question-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+}
+#dropdown-container{
+    flex: 1; 
+    max-width: 100%;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+#elective-section{
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+}
+
